@@ -6,5 +6,6 @@ ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.
 RUN cd /tmp &&  tar xvfz apache-tomcat-9.0.105.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.105/* /usr/local/tomcat/
 ADD **/*.war /usr/local/tomcat/webapps
+LABEL org.opencontainers.image.source https://github.com/salwad-basha-shaik/final-devops-project-2
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
